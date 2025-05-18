@@ -19,7 +19,7 @@ const Dashboard = ({ token, setLoading, userProfile, onLogout }) => {
     setLoading(true)
     setRefreshing(true)
     try {
-      const response = await fetch("http://localhost:5050/api/fetch-emails", {
+      const response = await fetch("https://inbox-therapist.onrender.com/api/fetch-emails", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

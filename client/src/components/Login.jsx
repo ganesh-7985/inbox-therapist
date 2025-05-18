@@ -4,7 +4,7 @@ import { Mail, Brain, Sparkles } from "lucide-react"
 const Login = ({ setLoading }) => {
   const handleLogin = () => {
     setLoading(true)
-    window.location.href = "http://localhost:5050/auth/google"
+    window.location.href = "https://inbox-therapist.onrender.com/auth/google"
   }
 
   return (
