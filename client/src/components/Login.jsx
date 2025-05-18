@@ -1,5 +1,5 @@
 import React from "react"
-import { Mail, Brain } from "lucide-react"
+import { Mail, Brain, Sparkles } from "lucide-react"
 
 const Login = ({ setLoading }) => {
   const handleLogin = () => {
@@ -13,8 +13,9 @@ const Login = ({ setLoading }) => {
         <div className="text-center">
           <div className="flex justify-center mb-4">
             <div className="relative">
-              <Mail className="w-16 h-16 text-indigo-600" />
-              <Brain className="absolute w-8 h-8 text-purple-500 -right-1 -bottom-1" />
+              <Mail className="w-16 h-16 text-purple-600" />
+              <Brain className="absolute w-8 h-8 text-indigo-500 -right-1 -bottom-1" />
+              <Sparkles className="absolute w-6 h-6 text-yellow-400 -left-1 -top-1 animate-pulse-slow" />
             </div>
           </div>
           <h1 className="text-3xl font-bold gradient-text">Inbox Therapist</h1>
@@ -22,10 +23,23 @@ const Login = ({ setLoading }) => {
         </div>
 
         <div className="space-y-6">
-          <p className="text-sm text-gray-500 text-center">
-            Connect your Gmail account to analyze your email sentiment and stress levels. We'll provide insights into
-            your communication patterns.
-          </p>
+          <div className="p-4 bg-purple-50 rounded-lg">
+            <h3 className="font-medium text-purple-700 mb-2">Discover Your Email Psychology</h3>
+            <ul className="text-sm text-gray-600 space-y-2">
+              <li className="flex items-center">
+                <span className="mr-2">✓</span> Analyze email sentiment patterns
+              </li>
+              <li className="flex items-center">
+                <span className="mr-2">✓</span> Track stress levels over time
+              </li>
+              <li className="flex items-center">
+                <span className="mr-2">✓</span> Get personalized wellness insights
+              </li>
+              <li className="flex items-center">
+                <span className="mr-2">✓</span> Visualize your communication health
+              </li>
+            </ul>
+          </div>
 
           <button
             onClick={handleLogin}
@@ -52,9 +66,34 @@ const Login = ({ setLoading }) => {
             <span className="text-gray-700 font-medium">Sign in with Google</span>
           </button>
 
-          <p className="text-xs text-gray-400 text-center">
-            We only analyze your recent emails and never store your personal data.
-          </p>
+          <div className="text-xs text-gray-400 text-center space-y-2">
+            <p>We only analyze your recent emails and never store your personal data.</p>
+            <p>Your data is processed securely and never shared with third parties.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-8 text-center max-w-md">
+        <h3 className="text-lg font-medium text-gray-700 mb-2">How It Works</h3>
+        <div className="grid grid-cols-3 gap-4 mt-4">
+          <div className="bg-white p-3 rounded-lg shadow">
+            <div className="flex justify-center mb-2">
+              <Mail className="w-6 h-6 text-purple-500" />
+            </div>
+            <p className="text-xs text-gray-600">Connect your Gmail</p>
+          </div>
+          <div className="bg-white p-3 rounded-lg shadow">
+            <div className="flex justify-center mb-2">
+              <Brain className="w-6 h-6 text-indigo-500" />
+            </div>
+            <p className="text-xs text-gray-600">AI analyzes emotions</p>
+          </div>
+          <div className="bg-white p-3 rounded-lg shadow">
+            <div className="flex justify-center mb-2">
+              <Sparkles className="w-6 h-6 text-yellow-500" />
+            </div>
+            <p className="text-xs text-gray-600">Get personalized insights</p>
+          </div>
         </div>
       </div>
     </div>

@@ -11,8 +11,80 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, #4f46e5 0%, #8b5cf6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  @apply bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent;
+}
+
+.gradient-bg {
+  @apply bg-gradient-to-r from-purple-600 to-indigo-600;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.tooltip {
+  @apply invisible absolute;
+}
+
+.has-tooltip:hover .tooltip {
+  @apply visible z-50;
+}
+
+.emotion-tag {
+  @apply px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.emotion-stress {
+  @apply bg-red-100 text-red-800;
+}
+
+.emotion-anxiety {
+  @apply bg-orange-100 text-orange-800;
+}
+
+.emotion-joy {
+  @apply bg-green-100 text-green-800;
+}
+
+.emotion-neutral {
+  @apply bg-gray-100 text-gray-800;
+}
+
+.emotion-calm {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.emotion-frustration {
+  @apply bg-amber-100 text-amber-800;
+}
+
+.emotion-excitement {
+  @apply bg-indigo-100 text-indigo-800;
+}
+
+.emotion-satisfaction {
+  @apply bg-purple-100 text-purple-800;
 }
