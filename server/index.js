@@ -7,7 +7,10 @@ require("dotenv").config()
 const app = express()
 const PORT = process.env.PORT
 
-app.use(cors())
+app.use(cors({
+  origin: 'https://inbox-therapist.vercel.app',
+  credentials: true
+}));
 app.use(express.json())
 
 const groq = new Groq({
