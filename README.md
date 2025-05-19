@@ -15,6 +15,8 @@ Email overload and digital communication stress are significant contributors to 
 - Provide actionable recommendations to improve digital wellbeing
 - Visualize communication health through intuitive charts and metrics
 
+## Youtube Video: https://www.youtube.com/watch?v=_YW6HVBYKLU
+
 ## ✨ Key Features
 
 - **Gmail OAuth Integration**: Secure access to user's email with proper permissions
